@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('ofertas', function (Blueprint $table) {
             $table->id();
+            $table->string('titulo'); // ¡Aquí ya está corregido!
+            $table->date('vigencia');
+            $table->string('tienda');
+            $table->decimal('precio_original', 8, 2);
+            $table->decimal('precio_descuento', 8, 2);
             $table->timestamps();
         });
     }
